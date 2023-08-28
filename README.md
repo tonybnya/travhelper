@@ -23,15 +23,11 @@ TravHelper is a web application designed to streamline the trip planning process
 
 1. Clone the repository:
 
-
 2. Install dependencies:
-
 
 3. Start the development server:
 
-
 4. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
-
 
 ## Contact
 
