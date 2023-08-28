@@ -1,4 +1,5 @@
-import { Navbar, Hero, Footer } from './components';
+import { Navbar, HeroCard } from './components';
+import { Hero, Footer } from './sections';
 
 const App = () => (
   <main className="relative">
@@ -6,6 +7,7 @@ const App = () => (
 
     <section>
       <Hero />
+      <HeroCard />
     </section>
 
     <section>

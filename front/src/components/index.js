@@ -1,9 +1,7 @@
 import Navbar from './Navbar';
-import Hero from './Hero';
-import Footer from './Footer';
+import HeroCard from './HeroCard';
 
 export {
   Navbar,
-  Hero,
-  Footer
+  HeroCard
 };
