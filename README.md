@@ -21,20 +21,20 @@ TravHelper is a web application designed to streamline the trip planning process
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone the repository: `git clone link-to-repo`
 
-2. Install dependencies:
+2. Install dependencies: `npm install`
 
-3. Start the development server:
+3. Start the development server: `npm run dev`
 
-4. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the application.
+4. Open your browser and visit [http://localhost:3000](http://localhost:5173) to view the application.
 
 ## Contact
 
 If you have any questions or suggestions regarding TravHelper, please feel free to reach out to us:
 
-- Mehdi Masmar: masmar507@gmail.com
-- Stephen Anim: anim.ansah.stephen@gmail.com
-- Tony NYA: nya.tony2010@gmail.com
+- Mehdi Masmar: <masmar507@gmail.com>
+- Stephen Anim: <anim.ansah.stephen@gmail.com>
+- Tony NYA: <nya.tony2010@gmail.com>
 
 Thank you for your interest in TravHelper. We look forward to delivering an exceptional travel planning experience!

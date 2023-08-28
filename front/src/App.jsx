@@ -1,4 +1,4 @@
-import { Navbar, HeroCard } from './components';
+import { Navbar, HeroCard, Button } from './components';
 import { Hero, Footer } from './sections';
 
 const App = () => (
@@ -8,6 +8,7 @@ const App = () => (
     <section>
       <Hero />
       <HeroCard />
+      <Button />
     </section>
 
     <section>
