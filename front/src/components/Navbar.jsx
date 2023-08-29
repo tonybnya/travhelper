@@ -1,9 +1,9 @@
-import { logo } from '../assets/images';
+import logo  from '../assets/images/logo.png';
 import { navLinks } from '../constants';
 
 const Navbar = () => {
   return (
-    <header className="absolute py-8 px-8 Z-10 w-full">
+    <header className="relative flex h-16 items-center justify-between">
       <nav className="flex justify-between items-center">
         <img
           src={logo}
@@ -14,7 +14,7 @@ const Navbar = () => {
         <ul className="flex flex-1 justify-center items-center gap-4 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
-              <a href={item.href} text-lg font-montserrat leading-normal text-dark-bg>
+              <a href={item.href} className="text-lg font-montserrat leading-normal text-dark-bg">
                 {item.label}
               </a>
             </li>
