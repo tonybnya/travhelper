@@ -1,4 +1,4 @@
-import logo  from '../assets/images/logo.png';
+import logo  from '../assets/images/logo.svg';
 import { navLinks } from '../constants';
 
 const Navbar = () => {
@@ -8,8 +8,8 @@ const Navbar = () => {
         <img
           src={logo}
           alt="logo"
-          width={50}
-          height={50}
+          width={70}
+          height={70}
         />
         <ul className="flex flex-1 justify-center items-center gap-4 max-lg:hidden">
           {navLinks.map((item) => (
