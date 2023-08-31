@@ -1,5 +1,5 @@
-import { Button } from '../components/Button';
-import logo from '../assets/images/logo.svg'
+import Button from '../components/Button';
+import logo from '../assets/images/logo.svg';
 
 const Homepage = () => {
   return (
@@ -17,18 +17,37 @@ const Homepage = () => {
           <span className='inline-block'>Experience</span>
           <span className="text-6xl">. </span>
         </h1>
-        <p className='font-montserrat text-slate-gray text-xl w-2/5 leading-8 mt-4 mb-4 text-justify'>
+        <p className='font-montserrat text-slate-gray text-xl leading-8 mt-4 mb-4 text-justify'>
            TravHelper is a web application designed to streamline the trip planning process for users. Whether you are planning a weekend getaway or a long vacation, TravHelper aims to provide a comprehensive solution for managing your travel itinerary. From booking air tickets to arranging local transportation, finding suitable accommodations, and even suggesting popular dining options, TravHelper has got you covered.
         </p>
       </div>
 
-      <div className="flex flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="bg-white w-4/5 text-black px-8 py-10 flex items-center justify-center flex-col rounded-md shadow-3xl">
         <img
           src={logo}
-          alt="TravHelper logo"
+          alt="logo"
+          width={90}
+          height={90}
+          className='cursor-pointer hover:scale-110'
+        />
+        <h3 className='text-xl font-montserrat font-bold mt-8 mb-8'>
+          Enter your request
+        </h3>
+        <input
+          type="text"
+          placeholder='From'
+          className='w-4/5 border-4 p-2 rounded-md mb-2 outline-none'
+        />
+        <input
+          type="text"
+          placeholder='To'
+          className='w-4/5 border-4 p-2 mb-8 rounded-md outline-none'
         />
 
-        <Button label="Submit" />
+        <Button
+          label="Submit"
+          className="mt-8"
+        />
       </div>
     </div>
   )
