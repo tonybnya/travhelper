@@ -6,19 +6,17 @@ import NotFoundPage from './pages/NotFoundPage';
 import Signup from './pages/signup';
 
 const App = () => (
-  <>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Homepage />}></Route>
-          <Route path='home' element={<Homepage />}></Route>
-          <Route path='login' element={<Login />}></Route>
-          <Route path='signup' element={<Signup />}></Route>
-          <Route path='*' element={<NotFoundPage />}></Route>
-        </Route>
-    </Routes>
-    </BrowserRouter>
-  </>
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Homepage />}></Route>
+        <Route path='home' element={<Homepage />}></Route>
+        <Route path='login' element={<Login />}></Route>
+        <Route path='signup' element={<Signup />}></Route>
+        <Route path='*' element={<NotFoundPage />}></Route>
+      </Route>
+  </Routes>
+  </BrowserRouter>
 );
 
 export default App;
