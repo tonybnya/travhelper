@@ -17,7 +17,7 @@ const Map = () => {
         <div className="bg-dark col-span-1 p-4 h-[90vh] shadow-inner rounded-lg border-black border-4">
           Column 1
         </div>
-        <div className="bg-dark-color col-span-1 p-4 rounded-lg border-4 border-black shadow-inner justify-center flex flex-wrap gap-4">
+        <div className="bg-dark-color col-span-1 p-4 rounded-lg border-4 border-black shadow-inner flex flex-wrap items-center justify-center gap-4">
           {boxes.map((box) => (
             <button
               key={box.label}

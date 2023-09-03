@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import jwt from 'jwt-decode';
+
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -112,7 +113,7 @@ const Login = () => {
               Forgot Password?
             </p>
             <p className="font-palanquin font-bold mb-8 text-gray-500 text-xl">
-              Already have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/signup">Sign Up Now</a></span>
+              Does not have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/signup">Sign Up Now</a></span>
             </p>
             <Button
               label="Login"

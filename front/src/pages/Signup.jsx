@@ -143,10 +143,10 @@ const Signup = () => {
             Forgot Password?
           </p>
           <p className="font-palanquin font-bold mb-8 text-gray-500 text-xl">
-            Already have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/signup">Sign Up Now</a></span>
+            Already have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/signup">Login Now</a></span>
           </p>
           <Button
-            label="Login"
+            label="Sign Up"
           />
         </div>
       </div>
