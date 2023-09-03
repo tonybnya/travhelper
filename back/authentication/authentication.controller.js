@@ -14,7 +14,7 @@ module.exports = {
             let user = result
             console.log(user);
             if (user.length != 0){ 
-                let token = jwt.sign({email}, CONFIG.jwt_token, { expiresIn: '1h' });
+                let token = jwt.sign(user[0], CONFIG.jwt_token, { expiresIn: '1h' });
                 return res.status(200).json({message: "Successfully authenticated!",  token})
             }
             return res.status(401).json({message: "Invalid email or password."})
