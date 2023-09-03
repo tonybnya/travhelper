@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom';
 import logo  from '../assets/images/logo.svg';
 import { navLinks } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <header className="padding-x py-8 absolute z-10 w-full">
+    <header className="padding-x py-2 absolute z-10 w-full">
       <nav className="flex justify-around items-center max-container border-b-4">
         <Link to='/'>
           <img
             src={logo}
             alt="logo"
-            width={100}
-            height={100}
+            width={70}
+            height={70}
             className='cursor-pointer hover:scale-110'
           />
         </Link>

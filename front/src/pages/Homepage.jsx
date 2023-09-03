@@ -1,13 +1,15 @@
 import Button from '../components/Button';
 import logo from '../assets/images/logo.svg';
+import { banner } from '../constants';
 
 const Homepage = () => {
   return (
-    <div className="w-full flex flex-1 justify-evenly items-center min-h-screen gap-10 max-container">
+    <div className="w-full flex justify-evenly items-center min-h-screen gap-10 max-container">
       <div
         className='flex flex-col justify-center w-full pt-10'>
-        <p className='text-8xl font-palanquin text-white font-bold pt-8'>
-          TravHelper
+        <p className='text-8xl font-palanquin text-white font-bold'>
+          {/* TravHelper */}
+          {banner.title}
         </p>
         <h1 className='mt-2 text-main-green font-palanquin text-[40px] font-bold'>
           <span className=''>Discover</span>
@@ -18,11 +20,12 @@ const Homepage = () => {
           <span className="text-6xl">. </span>
         </h1>
         <p className='font-montserrat text-slate-gray text-xl leading-8 mt-4 mb-4 text-justify'>
-           TravHelper is a web application designed to streamline the trip planning process for users. Whether you are planning a weekend getaway or a long vacation, TravHelper aims to provide a comprehensive solution for managing your travel itinerary. From booking air tickets to arranging local transportation, finding suitable accommodations, and even suggesting popular dining options, TravHelper has got you covered.
+           {/* TravHelper is a web application designed to streamline the trip planning process for users. Whether you are planning a weekend getaway or a long vacation, TravHelper aims to provide a comprehensive solution for managing your travel itinerary. From booking air tickets to arranging local transportation, finding suitable accommodations, and even suggesting popular dining options, TravHelper has got you covered. */}
+           {banner.text}
         </p>
       </div>
 
-      <div className="bg-white w-4/5 text-black px-8 py-10 flex items-center justify-center flex-col rounded-md shadow-3xl">
+      <div className="bg-white w-4/5 text-black px-8 py-10 flex items-center justify-center flex-col rounded-2xl shadow-3xl">
         <img
           src={logo}
           alt="logo"
@@ -46,7 +49,6 @@ const Homepage = () => {
 
         <Button
           label="Submit"
-          className="mt-8"
         />
       </div>
     </div>

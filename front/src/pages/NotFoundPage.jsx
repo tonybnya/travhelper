@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
 import error from '../assets/images/error.svg';
 import Button from '../components/Button';
+import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
   return (
-    <div className="place-content-center max-container flex flex-1 items-center justify-center flex-col">
+    <div className="place-content-center max-container flex flex-1 items-center justify-center flex-col min-h-screen">
       <img
         src={error}
         alt="404 error image"

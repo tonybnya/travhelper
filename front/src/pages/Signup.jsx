@@ -1,6 +1,8 @@
 const Signup = () => {
   return (
-    <div>signup</div>
+    <div className="min-h-screen">
+      Signup
+    </div>
   )
 }
 
