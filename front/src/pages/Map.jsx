@@ -17,11 +17,11 @@ const Map = () => {
         <div className="bg-dark col-span-1 p-4 h-[90vh] shadow-inner rounded-lg border-black border-4">
           Column 1
         </div>
-        <div className="bg-dark-green col-span-1 p-4 rounded-lg border-4 border-black shadow-inner">
+        <div className="bg-dark-color col-span-1 p-4 rounded-lg border-4 border-black shadow-inner justify-center flex flex-wrap gap-4">
           {boxes.map((box) => (
-            <div
+            <button
               key={box.label}
-              className='flex w-4 h-2 justify-center items-center rounded-md shadow-inner bg-black text-white'
+              className='bg-white cursor-pointer flex justify-center items-center w-2/5 h-10 p-2 shadow-inner rounded-md gap-2'
             >
               <img
                 src={box.src}
@@ -29,10 +29,10 @@ const Map = () => {
                 width={25}
                 height={25}
               />
-              <span className='font-bold capitalize text-main-green'>
+              <span className='font-bold capitalize text-black text-xl'>
                 {box.label}
               </span>
-            </div>
+            </button>
           ))}
         </div>
         <div className="col-span-2 rounded shadow-inner border-4 border-black">

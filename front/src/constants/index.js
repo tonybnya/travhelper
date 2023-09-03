@@ -30,7 +30,7 @@ export const banner = [
 export const boxes = [
   {
     src: food,
-    label: "restaurants",
+    label: "food",
     alt: "food icon",
   },
   {
