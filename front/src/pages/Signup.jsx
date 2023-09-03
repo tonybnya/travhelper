@@ -83,7 +83,7 @@ const Signup = () => {
           </h3>
 
           <Button
-            label="Login with Google"
+            label="Sign up with Google"
             iconURL={google}
             bgColor={bg}
             textColor={clr}
@@ -105,7 +105,7 @@ const Signup = () => {
           
           <input
             type="text"
-            placeholder='username'
+            placeholder='Username'
             value={username}
             onChange={(e) => handleInputChange(e, setUsername)}
             className={`w-4/5 border-4 p-2 rounded-md  outline-none ${errors.username ? 'border-rose-600' : 'mb-2'}`}
@@ -139,9 +139,6 @@ const Signup = () => {
           />
             {errors.confirm_password && <p className="text-left text-red-500 mb-2">{errors.confirm_password}</p>}
 
-          <p className="cursor-pointer font-palanquin font-bold underline mb-2 text-blue-900 text-xl">
-            Forgot Password?
-          </p>
           <p className="font-palanquin font-bold mb-8 text-gray-500 text-xl">
             Already have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/signup">Login Now</a></span>
           </p>
