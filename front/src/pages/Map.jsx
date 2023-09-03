@@ -36,7 +36,6 @@ const Map = () => {
           ))}
         </div>
         <div className="col-span-2 rounded shadow-inner border-4 border-black">
-          <h3>Map</h3>
           <GoogleMapReact
             bootstrapURLKeys={{ key: API_KEY }}
             defaultCenter={defaultProps.target}
