@@ -1,6 +1,5 @@
 import Button from '../components/Button';
 import logo from '../assets/images/logo.svg';
-import { banner } from '../constants';
 
 const Homepage = () => {
   return (
@@ -8,7 +7,7 @@ const Homepage = () => {
       <div
         className='flex flex-col justify-center w-full pt-10'>
         <p className='text-8xl font-palanquin text-white font-bold'>
-          {banner.title}
+          TravHelper
         </p>
         <h1 className='mt-2 text-main-green font-palanquin text-[40px] font-bold'>
           <span className=''>Discover</span>
@@ -19,7 +18,7 @@ const Homepage = () => {
           <span className="text-6xl">. </span>
         </h1>
         <p className='font-montserrat text-slate-gray text-xl leading-8 mt-4 mb-4 text-justify'>
-           {banner.text}
+        TravHelper is a web application designed to streamline the trip planning process for users. Whether you are planning a weekend getaway or a long vacation, TravHelper aims to provide a comprehensive solution for managing your travel itinerary. From booking air tickets to arranging local transportation, finding suitable accommodations, and even suggesting popular dining options, TravHelper has got you covered.
         </p>
       </div>
 
