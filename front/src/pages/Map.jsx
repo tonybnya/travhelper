@@ -1,5 +1,5 @@
 import GoogleMapReact from 'google-map-react';
-import boxes from '../constants';
+import {boxes} from '../constants';
 
 const Map = () => {
   const API_KEY = 'AIzaSyA-uAsEDeO66A0K0gMQ_T--ILbTI2aXws0';

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <header className="padding-x py-2 absolute z-10 w-full">
+    <header className="top-0 z-10 w-full">
       <nav className="flex justify-around items-center max-container border-b-4">
         <Link to='/'>
           <img
