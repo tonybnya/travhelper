@@ -1,7 +1,7 @@
-import { food } from '../assets/icons/food.svg';
-import { hotel } from '../assets/icons/hotel.svg';
-import { place } from '../assets/icons/place.svg';
-import { shop } from '../assets/icons/shop.svg';
+import food from '../assets/icons/food.svg';
+import hotel from '../assets/icons/hotel.svg';
+import place from '../assets/icons/place.svg';
+import shop from '../assets/icons/shop.svg';
 
 // import { food, hotel, place, shop } from '../assets/icons/*';
 

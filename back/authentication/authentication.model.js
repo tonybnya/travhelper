@@ -24,7 +24,7 @@ SELECT
 FROM 
     users_table 
 WHERE 
-    username = ? 
+    email = ? 
 AND 
     password = md5(?);
 `;

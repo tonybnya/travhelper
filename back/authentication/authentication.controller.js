@@ -6,18 +6,18 @@ const jwt = require('jsonwebtoken');
 module.exports = {
     login: async (req, res) => {
         let {
-            username,
+            email,
             password
         } = {...req.body}
         try {
-            const [result] = await connection.query(authentication_model.query_login, [username, password]);
+            const [result] = await connection.query(authentication_model.query_login, [email, password]);
             let user = result
             console.log(user);
             if (user.length != 0){ 
-                let token = jwt.sign({username}, CONFIG.jwt_token, { expiresIn: '1h' });
+                let token = jwt.sign({email}, CONFIG.jwt_token, { expiresIn: '1h' });
                 return res.status(200).json({message: "Successfully authenticated!",  token})
             }
-            return res.status(401).json({message: "Invalid username or password."})
+            return res.status(401).json({message: "Invalid email or password."})
         } catch (error) {
             return res.status(500).json({message: error})
         }
