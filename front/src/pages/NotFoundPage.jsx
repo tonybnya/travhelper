@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
   return (
-    <div className="place-content-center max-container flex flex-1 items-center justify-center flex-col min-h-screen">
+    <div className="place-content-center max-container flex flex-1 items-center justify-center flex-col">
       <img
         src={error}
         alt="404 error image"

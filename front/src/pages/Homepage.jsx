@@ -1,8 +1,11 @@
 import Button from '../components/Button';
 import logo from '../assets/images/logo.svg';
-
+import { ToastContainer } from 'react-toastify';
 const Homepage = () => {
   return (
+    <>
+    <ToastContainer />
+
     <div className="w-full flex justify-evenly items-center gap-10 max-container">
       <div
         className='flex flex-col justify-center w-full'>
@@ -49,6 +52,7 @@ const Homepage = () => {
         />
       </div>
     </div>
+    </>
   )
 }
 

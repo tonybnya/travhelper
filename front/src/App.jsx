@@ -1,9 +1,9 @@
 import Homepage from './pages/Homepage';
 import Layout from './pages/Layout';
-import Login from './pages/login';
+import Login from './pages/Login';
 import Map from './pages/Map';
 import NotFoundPage from './pages/NotFoundPage';
-import Signup from './pages/signup';
+import Signup from './pages/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => (
