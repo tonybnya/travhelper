@@ -13,7 +13,7 @@ const Map = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="grid grid-cols-4 gap-5 pt-40 px-10 text-white font-palanquin">
+      <div className="grid grid-cols-4 gap-5 text-white font-palanquin">
         <div className="bg-dark col-span-1 p-4 h-[90vh] shadow-inner rounded-lg border-black border-4">
           Column 1
         </div>
