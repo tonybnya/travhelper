@@ -3,8 +3,6 @@ import hotel from '../assets/icons/hotel.svg';
 import place from '../assets/icons/place.svg';
 import shop from '../assets/icons/shop.svg';
 
-// import { food, hotel, place, shop } from '../assets/icons/*';
-
 export const navLinks = [
   { href: "/", label: "home" },
   { href: "/login", label: "login" },
@@ -22,7 +20,7 @@ export const banner = [
 export const boxes = [
   {
     src: food,
-    label: "restaurants",
+    label: "food",
     alt: "food icon",
   },
   {
