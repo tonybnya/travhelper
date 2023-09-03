@@ -3,9 +3,9 @@ import logo from '../assets/images/logo.svg';
 
 const Homepage = () => {
   return (
-    <div className="w-full flex justify-evenly items-center min-h-screen gap-10 max-container">
+    <div className="w-full flex justify-evenly items-center gap-10 max-container">
       <div
-        className='flex flex-col justify-center w-full pt-10'>
+        className='flex flex-col justify-center w-full'>
         <p className='text-8xl font-palanquin text-white font-bold'>
           TravHelper
         </p>
