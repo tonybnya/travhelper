@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Layout from './pages/Layout';
 import Login from './pages/login';
-import NotFoundPage from './pages/NotFoundPage';
 import Map from './pages/Map';
+import NotFoundPage from './pages/NotFoundPage';
 import Signup from './pages/signup';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => (
   <BrowserRouter>
