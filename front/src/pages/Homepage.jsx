@@ -34,7 +34,7 @@ const Homepage = () => {
           className='cursor-pointer hover:scale-110'
         />
         <h3 className='text-xl font-montserrat font-bold mt-8 mb-8'>
-          Enter your request
+          Enter your travel itinerary
         </h3>
         <input
           type="text"

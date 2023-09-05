@@ -3,7 +3,7 @@ import google from '../assets/icons/google.svg';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import jwt from 'jwt-decode';
 
