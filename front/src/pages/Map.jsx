@@ -1,8 +1,8 @@
 import GoogleMapReact from 'google-map-react';
-import {boxes} from '../constants';
+import { boxes } from '../constants';
+// import mapStyles from './mapStyles';
 
 const Map = () => {
-  const API_KEY = 'AIzaSyA-uAsEDeO66A0K0gMQ_T--ILbTI2aXws0';
   const defaultProps = {
     target: {
       lat: -34.397,
@@ -17,11 +17,11 @@ const Map = () => {
         <div className="bg-dark col-span-1 p-4 h-[90vh] shadow-inner rounded-lg border-black border-4">
           Column 1
         </div>
-        <div className="bg-dark-color col-span-1 p-4 rounded-lg border-4 border-black shadow-inner flex flex-wrap items-center justify-center gap-4">
+        <div className="bg-dark-color col-span-1 p-4 rounded-lg border-4 border-black shadow-inner gap-2 flex items-start flex-wrap">
           {boxes.map((box) => (
             <button
               key={box.label}
-              className='bg-white cursor-pointer flex justify-center items-center w-2/5 h-10 p-2 shadow-inner rounded-md gap-2'
+              className='bg-white hover:bg-main-green cursor-pointer flex flex-auto justify-center items-center w-2/5 p-2 shadow-inner rounded-md gap-4'
             >
               <img
                 src={box.src}
@@ -37,12 +37,12 @@ const Map = () => {
         </div>
         <div className="col-span-2 rounded shadow-inner border-4 border-black">
           <GoogleMapReact
-            bootstrapURLKeys={{ key: API_KEY }}
+            bootstrapURLKeys={{ key: 'AIzaSyA-uAsEDeO66A0K0gMQ_T--ILbTI2aXws0' }}
             defaultCenter={defaultProps.target}
             center={defaultProps.target}
             defaultZoom={defaultProps.zoom}
             margin={[50, 50, 50, 50]}
-            // options={''}
+            // options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
             // onChange={''}
             // onChildClick={''}
           >
