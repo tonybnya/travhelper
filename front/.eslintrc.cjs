@@ -18,4 +18,14 @@ module.exports = {
     ],
     "react/prop-types": 0
   },
+  settings: {
+    // Add valid property names for specific libraries/frameworks
+    react: {
+      version: 'detect',
+    },
+    'google-map-react': {
+      // Define valid property names for google-map-react
+      validProperties: ['lat', 'lng'],
+    },
+  },
 }
