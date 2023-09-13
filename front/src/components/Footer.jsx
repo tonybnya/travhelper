@@ -1,23 +1,23 @@
-import copyrightSign from '../assets/icons/copyright-sign.svg';
-  
+import copyrightSign from "../assets/icons/copyright-sign.svg";
+
 const Footer = () => {
   return (
-    <footer className='padding-x py-8 z-10 w-full'>
-      <div className="max-container flex justify-between border-t-4 pt-4 text-white-400 font-bold mt-10 max-sm:flex-col max-sm:items-center">
-        <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer">
+    <footer className="padding-x z-10 w-full py-32">
+      <div className="max-container text-white-400 mt-10 flex justify-between border-t-4 py-4 font-bold max-sm:flex-col max-sm:items-center">
+        <div className="flex flex-1 cursor-pointer items-center justify-start gap-2 font-montserrat">
           <img
             src={copyrightSign}
             alt="copy right sign"
             width={20}
             height={20}
-            className="rounded-full m-0"
+            className="m-0 rounded-full"
           />
           <p>Copyright 2023. All Rights Reserved.</p>
         </div>
-        <p className="font-montserrat cursor-pointer">Terms & Conditions.</p>
+        <p className="cursor-pointer font-montserrat">Terms & Conditions.</p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
