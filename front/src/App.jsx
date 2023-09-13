@@ -1,7 +1,7 @@
 import Homepage from './pages/Homepage';
+import Information from './pages/Information';
 import Layout from './pages/Layout';
 import Login from './pages/Login';
-import Map from './pages/Map';
 import NotFoundPage from './pages/NotFoundPage';
 
 import Signup from './pages/Signup';
@@ -16,7 +16,7 @@ const App = () => {
         <Route index element={<Homepage />} />
         <Route path='home' element={<Homepage />} />
         <Route path='login' element={<Login />} />
-        <Route path='map' element={<Map />} />
+        <Route path='map' element={<Information />} />
         <Route path='signup' element={<Signup />} />
         <Route path='*' element={<NotFoundPage />} />
       </Route>

@@ -1,11 +1,32 @@
 import Button from '../components/Button';
 import logo from '../assets/images/logo.svg';
 import { ToastContainer } from 'react-toastify';
+import { InputBase  } from '@material-ui/core';
+import {useState } from 'react';
+import { Autocomplete } from '@react-google-maps/api';
+import SearchIcon from '@material-ui/icons/Search';
+import useStyle from './styles';
+import { useNavigate } from 'react-router-dom';
+
 const Homepage = () => {
+  const navigate = useNavigate();
+  const classes = useStyle();
+  const handleSubmit = () => {
+    onPlaceChanged()
+  }
+  const [autocomplete, setAutoComplete] = useState(null);
+
+  const onLoad = (autoC) => setAutoComplete(autoC);
+
+  const onPlaceChanged = () => {
+      const lat = autocomplete.getPlace().geometry.location.lat();
+      const lng = autocomplete.getPlace().geometry.location.lng();
+      navigate('/map',{ state: {lat, lng} });
+  }
   return (
     <>
     <ToastContainer />
-
+    <form onSubmit={handleSubmit}>
     <div className="w-full flex justify-evenly items-center gap-10 max-container">
       <div
         className='flex flex-col justify-center w-full'>
@@ -36,22 +57,20 @@ const Homepage = () => {
         <h3 className='text-xl font-montserrat font-bold mt-8 mb-8'>
           Enter your travel itinerary
         </h3>
-        <input
-          type="text"
-          placeholder='From'
-          className='w-4/5 border-4 p-2 rounded-md mb-2 outline-none'
-        />
-        <input
-          type="text"
-          placeholder='To'
-          className='w-4/5 border-4 p-2 mb-8 rounded-md outline-none'
-        />
-
+        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase placeholder='Search...' classes={{ root: classes.inputRoot, input: classes.inputInput}}/>
+          </div>
+        </Autocomplete>
         <Button
           label="Submit"
         />
       </div>
     </div>
+    </form>
     </>
   )
 }

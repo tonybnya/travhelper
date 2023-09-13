@@ -1,28 +1,30 @@
-import React, {useState} from 'react';
-import {CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select} from '@material-ui/core';
+import {Grid, Typography, InputLabel, MenuItem, FormControl, Select, CircularProgress} from '@material-ui/core';
 import useStyles from './lisStyles';
 import PlaceDetails from './PlaceDetails'
-const List = ({places, childClicked}) => {
-    console.log({childClicked});
+const List = ({places, type, setType, rating, setRating, isLoading}) => {
     const classes = useStyles();
-    const [type, setType] = useState('restaurants');
-    const [rating, setRating] = useState('');
     return (
         <div className={classes.container}>
             <Typography variant='h4'>
                 Restaurants, Hotels and Attractions around you
                 </Typography>
+                {isLoading ? (
+                    <div className={classes.loading}>
+                        <CircularProgress size="5rem"/>
+                    </div>
+                ): (
+                <>
                 <FormControl className={classes.formControl}>
-                    <InputLabel>Type</InputLabel>
-                    <Select value={type} onChange={(e) => setType(e.target.value)}>
+                    <InputLabel className={classes.label}>Type</InputLabel>
+                    <Select className={classes.label} value={type} onChange={(e) => setType(e.target.value)}>
                         <MenuItem value='restaurants'>Restaurants</MenuItem>
                         <MenuItem value='hotels'>Hotels</MenuItem>
                         <MenuItem value='attractions'>Attractions</MenuItem>
                     </Select>
                 </FormControl>
                 <FormControl className={classes.formControl}>
-                    <InputLabel>Rating</InputLabel>
-                    <Select value={rating} onChange={(e) => setRating(e.target.value)}>
+                    <InputLabel className={classes.label}>Rating</InputLabel>
+                    <Select className={classes.label} value={rating} onChange={(e) => setRating(e.target.value)}>
                         <MenuItem value={0}>ALL</MenuItem>
                         <MenuItem value={3}>Above 3.0</MenuItem>
                         <MenuItem value={4}>Above 4.0</MenuItem>
@@ -36,7 +38,8 @@ const List = ({places, childClicked}) => {
                         </Grid>
                     ))}
                     </Grid> 
-
+                </>
+                )}
         </div>
     )
 }
