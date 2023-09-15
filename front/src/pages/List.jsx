@@ -26,18 +26,20 @@ const List = ({places, type, setType, rating, setRating, isLoading}) => {
                     <InputLabel className={classes.label}>Rating</InputLabel>
                     <Select className={classes.label} value={rating} onChange={(e) => setRating(e.target.value)}>
                         <MenuItem value={0}>ALL</MenuItem>
-                        <MenuItem value={3}>Above 3.0</MenuItem>
-                        <MenuItem value={4}>Above 4.0</MenuItem>
-                        <MenuItem value={4.5}>Above 4.5</MenuItem>
+                        <MenuItem value={3}>Above 3 ⭐</MenuItem>
+                        <MenuItem value={4}>Above 4 ⭐</MenuItem>
+                        <MenuItem value={5}>5 ⭐ only</MenuItem>
                     </Select>
                 </FormControl>
-                <Grid container spacing={3} className={classes.list}>
-                    {places ?.map((place, i) => (
-                        <Grid item key={i} xs={12}>
-                            <PlaceDetails place={place}/>
-                        </Grid>
-                    ))}
+                {places?.length == 0 ? <CircularProgress />:
+                    <Grid container spacing={3} className={classes.list}>
+                        {places ?.map((place, i) => (
+                            <Grid item key={i} xs={12}>
+                                <PlaceDetails place={place}/>
+                            </Grid>
+                        ))}
                     </Grid> 
+                    }
                 </>
                 )}
         </div>

@@ -19,7 +19,6 @@ const Information = () => {
     const [rating, setRating] = useState('');
     const [filteredPlaces, setfilteredPlaces] = useState([]);
     const [autocomplete, setAutoComplete] = useState(null);
-
     const mapRef = useRef(null);
   
     const handleLoad = (map) => {
@@ -43,9 +42,9 @@ const Information = () => {
       })
     }, []);
     useEffect(() => {
-        const filteredPlaces = places?.filter((place) => place.rating > rating);
+        const filteredPlaces = places?.filter((place) => place.rating >= rating);
         setfilteredPlaces(filteredPlaces);
-    }, [rating])
+    }, [places, rating])
     useEffect(() => {
       getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
         setPlaces(data);
@@ -85,21 +84,21 @@ const Information = () => {
   
         <div className="grid grid-cols-4 gap-5 text-white font-palanquin">
           <div className="bg-dark-color col-span-2 p-4 rounded-lg border-4 border-black shadow-inner gap-4">
-            <List 
-                places={filteredPlaces.length ? filteredPlaces : places} 
-                childClicked={childClicked}
-                type={type}
-                setType={setType}
-                rating={rating}
-                setRating={setRating}
-            />
+              <List 
+                  places={filteredPlaces?.length ? filteredPlaces : places} 
+                  childClicked={childClicked}
+                  type={type}
+                  setType={setType}
+                  rating={rating}
+                  setRating={setRating}
+              />
           </div>
             <Map 
                 setCoordinates={setCoordinates}
                 coordinates={coordinates}
                 childClicked={childClicked}
                 setchildClicked={handleChildClick}
-                places={filteredPlaces.length ? filteredPlaces : places}
+                places={filteredPlaces?.length ? filteredPlaces : places}
                 onBoundsChanged={handleBoundsChanged}
                 handleLoad={handleLoad}
                 />

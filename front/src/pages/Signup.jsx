@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import google from '../assets/icons/google.svg';
+import logo  from '../assets/images/logo.svg';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Swal from 'sweetalert2'
@@ -71,29 +71,21 @@ const Signup = () => {
     }
   };
 
-  const bg = "bg-blue-900";
-  const clr = "text-white";
   return (
     <>
     <form onSubmit={handleSubmit}>
       <div className="flex items-center justify-center">
         <div className="bg-white w-2/4 place-content-center text-black px-8 py-10 flex items-center justify-center flex-col rounded-2xl shadow-3xl">
-          <h3 className='font-montserrat font-bold mt-8 mb-8' style={{fontSize:'30px'}}>
+          <img
+              src={logo}
+              alt="logo"
+              width={200}
+              height={200}
+              className='cursor-pointer hover:scale-110'
+            />
+          <h3 className='font-montserrat font-bold mb-4' style={{fontSize:'30px'}}>
             Signup
           </h3>
-
-          <Button
-            label="Sign up with Google"
-            iconURL={google}
-            bgColor={bg}
-            textColor={clr}
-            className="font-bold"
-          />
-
-          <span className="text-gray-500 font-palanquin font-bold my-10 text-xl">
-            Or use your email address
-          </span>
-
           <input
             type="text"
             placeholder='Full name'
@@ -140,7 +132,7 @@ const Signup = () => {
             {errors.confirm_password && <p className="text-left text-red-500 mb-2">{errors.confirm_password}</p>}
 
           <p className="font-palanquin font-bold mb-8 text-gray-500 text-xl">
-            Already have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/signup">Login Now</a></span>
+            Already have an account? <span className="text-blue-900 cursor-pointer underline"><a href="/login">Login Now</a></span>
           </p>
           <Button
             label="Sign Up"

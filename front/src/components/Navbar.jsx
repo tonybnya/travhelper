@@ -3,16 +3,28 @@ import { navLinks } from '../constants';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
+
 
 const Navbar = () => {
+  const userData = localStorage.getItem('userData');
   const navigate = useNavigate();
-  const handleLogout = () => {
+  const handleLogout = async () => {
     // Clear user data from localStorage
-    localStorage.removeItem('userData');
-    toast.success('Logged out successfully!', {
-      position: toast.POSITION.TOP_RIGHT,
+    Swal.fire({
+      title: 'Logging you out...',
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading()
+      },
+    }).then(() => {
+      localStorage.removeItem('userData');
+      toast.success('Logged out successfully!', {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+      navigate('/home');
     });
-    navigate('/login');
   };
   return (
     <header className="top-0 p-2 z-10 w-full">
@@ -29,12 +41,13 @@ const Navbar = () => {
         <ul className="flex flex-1 justify-end items-center gap-10 max-lg:hidden">
           {navLinks.map((item) => (
             <li key={item.label}>
-              { item.label == 'logout' ? <a className="text-3xl font-palanquin leading-normal text-dark-bg capitalize" onClick={handleLogout}>{item.label}</a> :
-              (
+              { ['logout', 'home'].includes(item.label) && userData && <a href={item.label == 'home' ? "/home" : "#"} className="text-3xl font-palanquin leading-normal text-dark-bg capitalize" onClick={item.label == 'logout' && handleLogout}>{item.label}</a> }
+              {
+                !['logout', 'home'].includes(item.label) && !userData &&
                 <a href={item.href} className="text-3xl font-palanquin leading-normal text-dark-bg capitalize">
                 {item.label}
               </a>
-              )}
+              }
 
             </li>
           ))}

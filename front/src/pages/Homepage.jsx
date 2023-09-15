@@ -3,25 +3,37 @@ import logo from '../assets/images/logo.svg';
 import { ToastContainer } from 'react-toastify';
 import { InputBase  } from '@material-ui/core';
 import {useState } from 'react';
+import Swal from 'sweetalert2';
 import { Autocomplete } from '@react-google-maps/api';
 import SearchIcon from '@material-ui/icons/Search';
 import useStyle from './styles';
 import { useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
+  const userData = localStorage.getItem('userData');
   const navigate = useNavigate();
   const classes = useStyle();
   const handleSubmit = () => {
-    onPlaceChanged()
+      onPlaceChanged()
   }
   const [autocomplete, setAutoComplete] = useState(null);
 
   const onLoad = (autoC) => setAutoComplete(autoC);
 
   const onPlaceChanged = () => {
+    if (userData) {
       const lat = autocomplete.getPlace().geometry.location.lat();
       const lng = autocomplete.getPlace().geometry.location.lng();
       navigate('/map',{ state: {lat, lng} });
+    }
+    else {
+      Swal.fire({
+        title: 'You don\'t have access!',
+        text: 'You need to login or sign up first to explore the city that you want to travel to...',
+        icon: 'error',
+      })
+      navigate('/login')
+    }
   }
   return (
     <>

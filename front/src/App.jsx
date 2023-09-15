@@ -3,12 +3,12 @@ import Information from './pages/Information';
 import Layout from './pages/Layout';
 import Login from './pages/Login';
 import NotFoundPage from './pages/NotFoundPage';
-
+// import { useState } from 'react';
 import Signup from './pages/Signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
   <BrowserRouter>
     <Routes>

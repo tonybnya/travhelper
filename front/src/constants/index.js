@@ -4,19 +4,12 @@ import place from '../assets/icons/place.svg';
 import shop from '../assets/icons/shop.svg';
 
 // import { food, hotel, place, shop } from '../assets/icons/*';
-const userData = localStorage.getItem('userData');
-console.log(userData);
-const isLoggedIn = !!userData; // Convert userData to a boolean
+// const userData = localStorage.getItem('userData');
 export const navLinks = [
   { href: "/", label: "home" },
-  isLoggedIn &&
-  (
-    { href: "/logout", label: "logout" }
-  ),
-  !isLoggedIn &&
-    { href: "/login", label: "login" },
-  !isLoggedIn &&
-    { href: "/signup", label: "sign up" }
+  { href: "/logout", label: "logout" },
+  { href: "/login", label: "login" },
+  { href: "/signup", label: "sign up" }
 ];
 
 export const banner = [
