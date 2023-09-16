@@ -14,10 +14,10 @@ TravHelper is a web application designed to streamline the trip planning process
 
 ## Technologies
 
-- Languages: HTML, CSS, JavaScript/TypeScript, Python
-- Frameworks: React, Flask, Tailwind, Express.js
+- Languages: HTML, CSS, JavaScript/TypeScript
+- Frameworks: React, Tailwind, Express.js
 - Databases: MySQL
-- Tools: Git, GitHub, NodeJS, Heroku, GitHub Pages/Netlify
+- Tools: Git, GitHub, NodeJS, Heroku, GitHub Pages/Netlify, Rapid API, Vercel
 
 ## Getting Started
 
